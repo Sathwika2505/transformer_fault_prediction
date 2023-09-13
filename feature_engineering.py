@@ -15,6 +15,7 @@ def feature_engineering():
     # print(dataset_balanced)
 
     data = dataset_balanced.copy()
+    data.to_csv("transformer_fault_prediction.csv", index = False)
     return data
 
 feature_engineering()

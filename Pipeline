@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("Extract Data"){
             steps{
-                sh 'python3 load_data.py'
+                sh 'python3 loading_data.py'
             }
         }
         stage("Data Analysis"){
@@ -14,7 +14,7 @@ pipeline{
         }
         stage("Data Preprocessing"){
             steps{
-                sh 'python3 data_preprocess.py'
+                sh 'python3 data_preprocessing.py'
             }
         }
         stage("Data Visualization"){
