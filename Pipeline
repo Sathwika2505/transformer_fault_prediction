@@ -31,7 +31,7 @@ pipeline{
     post{
        
         always {
-            archiveArtifacts artifacts: 'machine_predictive_maintenance_clean_data.csv', onlyIfSuccessful: true
+            archiveArtifacts artifacts: 'transformer_fault_prediction.csv', onlyIfSuccessful: true
         }
             }
 }
