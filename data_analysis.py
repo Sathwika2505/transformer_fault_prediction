@@ -14,8 +14,8 @@ def data_analysis():
     print(data2.shape)
     print(data2.head())
     print(data2.tail())
-    print(data1.isnull.sum())
-    print(data2.isnull.sum())
+    print(data1.isnull().sum())
+    print(data2.isnull().sum())
     for col in data1.columns:
         print(col, data1[col].nunique())
     for col in data2.columns:
