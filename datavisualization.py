@@ -14,6 +14,8 @@ def data_visualization():
     categ = ['MOG_A']
     numer = ['VL1', 'VL2', 'VL3', 'IL1', 'IL2', 'IL3', 'VL12', 'VL23', 'VL31',
        'INUT', 'OTI', 'ATI', 'OLI']
+    
+    #Outliers removal
     for x in numer:
         q75,q25 = np.percentile(dataset.loc[:,x],[75,25])
         intr_qr = q75-q25    
