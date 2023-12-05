@@ -34,7 +34,7 @@ def data_visualization():
     #     fig.update_yaxes(showgrid=False,zeroline=False)
         # fig.show()
         # a.append(fig)
-    df=data.drop("Extracurricular Activities",axis=1)
+    df=data.drop("MOG_A",axis=1)
     y=df.corr().columns.tolist()
     z=df.corr().values.tolist()
     z_text = np.around(z, decimals=4) # Only show rounded value (full value on hover)
