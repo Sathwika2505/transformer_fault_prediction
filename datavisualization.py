@@ -15,7 +15,7 @@ a =[]
 def data_visualization():
     data = feature_engineering()
     col=list(data.columns)
-    col.remove("Extracurricular Activities")
+    col.remove("MOG_A")
     print(col)
     for i in col:
         fig = px.box(data, y=i)
