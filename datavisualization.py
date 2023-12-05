@@ -18,13 +18,6 @@ def data_visualization():
     col=list(data.columns)
     col.remove("MOG_A")
     print(col)
-    for x in col:
-        q75,q25 = np.percentile(data.loc[:,x],[75,25])
-        intr_qr = q75-q25 
-        max = q75+(1.5*intr_qr)
-        min = q25-(1.5*intr_qr) 
-        data.loc[data[x] < min,x] = np.nan
-        data.loc[data[x] > max,x] = np.nan
     for i in col:
         fig = px.box(data, y=i)
         fig.update_layout(template='plotly_dark')
