@@ -14,6 +14,7 @@ from PIL import Image
 a =[]
 def data_visualization():
     data = feature_engineering()
+    data.drop(['OTI_A','OTI_T','WTI'], axis=1,inplace=True)
     col=list(data.columns)
     col.remove("MOG_A")
     print(col)
